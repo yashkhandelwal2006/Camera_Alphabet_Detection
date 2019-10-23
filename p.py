@@ -1,3 +1,6 @@
+
+
+		
 def maxSum(arr, n, k):
     res = 0
     start=0
@@ -177,8 +180,10 @@ while(True):
                     if i==0:
                         continue
                     cv2.line(alpha , l[i-1] , l[i] , 255 , 3)
-                cv2.imshow("alpha",alpha)
-                print(str(cnn(alpha)))
+                    
+                alpha1 = cv2.flip(alpha, 1)
+                cv2.imshow("alpha",alpha1)
+                print(str(cnn(alpha1)))
                 
             l=[]
         cv2.imshow('frame',frame)
